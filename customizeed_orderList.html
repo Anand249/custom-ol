@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Style for the ordered list */
+    ol {
+      list-style-type: none; /* Remove default numbering */
+      counter-reset: my-counter; /* Reset the counter for custom numbering */
+    }
+
+    /* Style for the list items */
+    li {
+      counter-increment: my-counter; /* Increment the counter for each list item */
+      position: relative;
+      margin-bottom: 10px; /* Add some space between list items */
+      display: flex;
+      align-items: baseline; /* Align baseline of the content */
+    }
+
+    /* Style for the disc with white number and black circle */
+    li::before {
+      content: counter(my-counter); /* Display the current value of the counter */
+      display: inline-block;
+      width: 24px; /* Fixed width of the disc */
+      min-width: 24px; /* Ensure a minimum width */
+      height: 24px; /* Adjust the height of the disc */
+      line-height: 24px; /* Center the number vertically */
+      text-align: center; /* Center the number horizontally */
+      border: 2px solid black; /* Border color */
+      border-radius: 50%; /* Make it a circle */
+      background-color: #000000; /* Black background color */
+      color: #ffffff; /* White number color */
+      margin-right: 10px; /* Adjust the space between the disc and the content */
+    }
+
+    /* Style for the text content */
+    li span {
+      margin-left: 5px; /* Adjust the space between the number and the text */
+    }
+
+    /* Media query for handling line break on smaller screens */
+    @media (max-width: 245px) {
+      li {
+        flex-direction: column; /* Stack the content in a column */
+        align-items: flex-start; /* Align items to the start of the column */
+      }
+
+      li::before {
+        margin-bottom: 5px; /* Add space between the disc and the text */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <ol>
+    <li>
+      <span>My name is Anand and I am from India y name is Anand and I am from India y name is Anand and I am from India y name is Anand and I am from India</span>
+    </li>
+    <li>
+      <span>My name is Yerni and I am from USA</span>
+    </li>
+    <!-- Add more list items as needed -->
+  </ol>
+
+</body>
+</html>
